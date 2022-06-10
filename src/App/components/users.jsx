@@ -29,7 +29,7 @@ const Users = ({ users, ...rest }) => {
           </thead>
           <tbody>
             {userCrop.map((user) => (
-              <User key={user._id} {...rest} {...user} key={user._id} />
+              <User key={user._id} {...rest} {...user} />
             ))}
           </tbody>
         </table>
