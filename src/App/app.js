@@ -18,11 +18,15 @@ function App() {
             })
         );
         console.log(id);
-    }
+    };
     return (
         <div>
             <SearchStatus length={users.length} />
-            <Users onDelete={handleDelete} onToggleBookMark={handleToggleBookMark} users={users} />
+            <Users
+                onDelete={handleDelete}
+                onToggleBookMark={handleToggleBookMark}
+                users={users}
+            />
         </div>
     );
 }
