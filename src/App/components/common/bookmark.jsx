@@ -6,8 +6,7 @@ const BookMark = ({ status, ...rest }) => {
         <button {...rest}>
             <i
                 className={
-                    "bi bi-emoji-angry" +
-                    (status ? "bi bi-emoji-heart-eyes-fill" : "")
+                    "bi bi-emoji-" + (status ? "heart-eyes-fill" : "angry")
                 }
             ></i>
         </button>

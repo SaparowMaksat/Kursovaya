@@ -17,7 +17,7 @@ const UserPage = ({ userId }) => {
 
     if (user) {
         return (
-            <div>
+            <div className="col-md-6 offset-md-3 shadow p-4">
                 <h1>{user.name}</h1>
                 <h2>Профессия: {user.profession.name}</h2>
                 <Qualities qualities={user.qualities} />
