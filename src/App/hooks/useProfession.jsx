@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 const ProfessionContext = React.createContext();
 
-export const useProfession = () => {
+export const useProfessions = () => {
     return useContext(ProfessionContext);
 };
 
