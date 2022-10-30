@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { displayData } from "../../../utils/displayData";
-import { useUser } from "../../../hooks/useUsers";
-import { useAuth } from "../../../hooks/useAuth";
+import { useSelector } from "react-redux";
+import { getCurrentUserId, getUsersById } from "../../../store/users";
 
 const Comment = ({
     content,
@@ -11,9 +11,8 @@ const Comment = ({
     userId,
     onRemove
 }) => {
-    const { getUserById } = useUser();
-    const { currentUser } = useAuth();
-    const user = getUserById(userId);
+    const currentUserId = useSelector(getCurrentUserId());
+    const user = useSelector(getUsersById(userId));
 
     return (
         <div className="bg-light card-body mb-3">
@@ -36,7 +35,7 @@ const Comment = ({
                                             - {displayData(created)}
                                         </span>
                                     </p>
-                                    {currentUser._id === userId && (
+                                    {currentUserId === userId && (
                                         <button
                                             className="btn btn-sm text-primary d-flex align-items-center"
                                             onClick={() => onRemove(id)}

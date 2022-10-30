@@ -11,6 +11,7 @@
         "bootstrap": "^5.1.0",
         "bootstrap-icons": "^1.5.0",
         "eslint-plugin-prettier": "^3.4.1",
+        "history": "^4.9.0",
         "lodash": "^4.17.15",
         "nanoid": "^4.0.0",
         "prop-types": "^15.7.2",
